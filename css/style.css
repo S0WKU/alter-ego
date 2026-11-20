@@ -1,0 +1,173 @@
+
+/*GLOBAL*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/*fond avec font*/
+body {
+    background-color: #080808;
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+/*HEADER / NAVIGATION*/
+
+header {
+    width: 100%;
+    padding: 25px 10%;
+    border-bottom: 1px solid #080808;
+}
+/*organisation de la nav*/
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+/*suppression du soulignement et couleur des liens de la nav*/
+nav a {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+/*changement de couleur des liens de la nav au survol*/
+nav a:hover {
+    color: #ff2020;
+}
+
+
+/*HERO SECTION*/
+/*hauteur de la section hero, alignement du contenu et espacement*/
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 12%;
+    gap: 60px;
+}
+
+
+/*TEXTE*/
+/*organisation du contenu de la section hero*/
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+    min-width: 0;
+}
+/*font et style du sous-titre de la section hero*/
+.subtitle {
+    font-family: 'Space Mono', monospace;
+    color: #ff2020;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+/*taille, graisse et espacement du titre de la section hero*/
+.hero h1 {
+    font-size: 110px;
+    font-weight: 700;
+    letter-spacing: -6px;
+    line-height: 1;
+}
+/*changement de couleur d'une partie du titre de la section hero*/
+.hero h1 span {
+    color: #ff2020;
+}
+/*taille, couleur et espacement du texte de description de la section hero*/
+.description {
+    color: #999;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 30px 0;
+    max-width: 450px;
+}
+
+
+/*BOUTON*/
+/*style du bouton de la section hero*/
+.button {
+    display: inline-block;
+    padding: 14px 24px;
+    border: 1px solid #790000;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+/*changement de couleur du bouton de la section hero au survol*/
+.button:hover {
+    background-color: #790000;
+    border-color: #ff2020;
+}
+
+
+/*IMAGE*/
+/*style de l'image de la section hero, largeur, espacement et bordure*/
+.hero-image {
+    width: 500px;
+    flex-shrink: 0;
+    padding: 10px;
+    border: 2px solid #790000;
+}
+/*style de l'image de la section hero, largeur, hauteur et affichage*/
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/*RESPONSIVE*/
+/*style pour les écrans de taille maximale de 768px, ajustement du padding du header*/
+@media screen and (max-width: 768px) {
+/*ajustement du padding du header*/
+    header {
+        padding: 25px 5%;
+    }
+/*ajustement de l'alignement de la nav*/
+    nav {
+        justify-content: center;
+    }
+/*ajustement de l'espacement des éléments de la nav*/
+    nav ul {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+/*ajustement de la taille du titre de la section hero*/
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 70px 5%;
+    }
+/*ajustement de la taille du titre de la section hero*/
+    .hero h1 {
+        font-size: 75px;
+    }
+/*ajustement de la taille du texte de description de la section hero*/
+    .description {
+        margin: 30px auto;
+    }
+/*ajustement de la taille de l'image de la section hero*/
+    .hero-image {
+        width: 100%;
+        max-width: 350px;
+    }
+
+}
